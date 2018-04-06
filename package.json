@@ -1,0 +1,38 @@
+{
+  "name": "react-dom-test-env",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "build:docs": "jsdoc2md src/index.js > API.md",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": ["prettier --write", "git add"],
+    "yarn.lock": ["git rm --cached"]
+  },
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jsdoc-to-markdown": "^4.0.1",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.11.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3"
+  },
+  "dependencies": {
+    "pretty-format": "^22.4.3"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
