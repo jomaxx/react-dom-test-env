@@ -1,21 +1,27 @@
 {
   "name": "react-dom-test-env",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "license": "MIT",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "rollup -c",
     "build:docs": "jsdoc2md src/index.js > API.md",
     "test": "jest",
-    "prepublishOnly":
-      "yarn build && yarn build:docs && JEST_ENV=production yarn test"
+    "prepublishOnly": "yarn build && yarn build:docs && JEST_ENV=production yarn test"
   },
   "lint-staged": {
-    "*.{js,md,json}": ["prettier --write", "git add"],
-    "yarn.lock": ["git rm --cached"]
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
   },
   "devDependencies": {
     "babel-core": "6",
