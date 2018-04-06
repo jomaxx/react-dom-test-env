@@ -66,6 +66,6 @@ test("waits for loaded", () => {
 
   mount(<Test />);
   const loaded = waitFor("#loaded");
-  expect(loaded.innerText).toBe("Hello World!");
+  expect(loaded.innerHTML).toBe("Hello World!");
 });
 ```
