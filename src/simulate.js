@@ -99,11 +99,6 @@ const eventMap = {
   transitionEnd: [TransitionEvent, { bubbles: true, cancelable: true }]
 };
 
-const eventAliasMap = {
-  doubleClick: "dblClick",
-  change: "input"
-};
-
 function simulate(element, event) {
   return element.dispatchEvent(event);
 }
